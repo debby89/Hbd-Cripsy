@@ -2,8 +2,9 @@
 
 import React, { useEffect } from "react";
 import Snowfall from "../snow/page";
+import Image from 'next/image';
 
-const pages = () => {
+const Pages = () => {
   useEffect(() => {
     const videos = document.querySelectorAll("video");
     videos.forEach((video) => {
@@ -28,15 +29,18 @@ const pages = () => {
       </div>
 
       <div className="flex justify-center">
-        <img
-          src="assets/1.jpeg"
+        <Image
+          src="/assets/1.jpeg"
+          alt="Birthday celebration"
           className="rounded-full p-10 w-full md:w-auto lg:max-w-md"
+          width={500}
+          height={500}
         />
       </div>
 
       <div className="flex items-center justify-center font-bold p-10 text-center">
         <p className="text-lg md:text-xl lg:text-2xl">
-        Tune in for a dose of happiness! 📸
+          Tune in for a dose of happiness! 📸
         </p>
       </div>
 
@@ -45,25 +49,27 @@ const pages = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-10 bg-gray-900">
         <div className="flex flex-col items-center justify-center bg-gray-800 rounded-lg shadow-lg p-4">
           <video className="w-full max-w-md max-h-64 rounded-lg" controls>
-            <source src="video/1.mp4" type="video/mp4" />
+            <source src="/video/1.mp4" type="video/mp4" />
           </video>
           <p className="text-white mt-4 text-lg text-center">
-          Forever my Beautiful Barrister🖤
+            Forever my Beautiful Barrister🖤
           </p>
         </div>
         <div className="flex flex-col items-center justify-center bg-gray-800 rounded-lg shadow-lg p-4">
           <video className="w-full w-4xl max-h-64 rounded-lg" controls>
-            <source src="video/2.mp4" type="video/mp4" />
+            <source src="/video/2.mp4" type="video/mp4" />
           </video>
           <p className="text-white mt-4 text-lg text-center">
-          Your dance sweep me off my feet! 💎
+            Your dance sweep me off my feet! 💎
           </p>
         </div>
         <div className="flex flex-col items-center justify-center bg-gray-800 rounded-lg shadow-lg p-4">
           <video className="w-full max-w-2xl max-h-64 rounded-lg" controls>
-            <source src="video/3.mp4" type="video/mp4" />
+            <source src="/video/3.mp4" type="video/mp4" />
           </video>
-          <p className="text-white mt-4 text-lg text-center">Your smile illuminates my day💋</p>
+          <p className="text-white mt-4 text-lg text-center">
+            Your smile illuminates my day💋
+          </p>
         </div>
       </div>
 
@@ -93,4 +99,4 @@ const pages = () => {
   );
 };
 
-export default pages;
+export default Pages;
